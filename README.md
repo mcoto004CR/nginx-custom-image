@@ -54,9 +54,19 @@ See it...
     go to http://localhost:8080/
     and you should be able to see the index.html content displayed
     
+Push image to hub repository
+- Create a repository
+
+Login to docker hub
+docker login -u "crhostservices" -p "o3&l49%1n8y2" docker.io
+docker login --username=yourhubusername  , it will ask for the password
 
 
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+    https://forums.docker.com/t/docker-push-error-requested-access-to-the-resource-is-denied/64468
     
+    https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
     
    https://help.insight.com/app/answers/detail/a_id/121/~/getting-started-with-docker-part-2%3A-building-images-and-docker-compose
 https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-private-repository
