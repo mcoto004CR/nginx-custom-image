@@ -64,8 +64,8 @@ Push image to hub repository
 - Create a repository
 
 Login to docker hub
-docker login -u "crhostservices" -p "o3&l49%1n8y2" docker.io
-docker login --username=yourhubusername  , it will ask for the password
+docker login -u "username" -p "password" docker.io
+may work: docker login --username=yourhubusername  , it will ask for the password
 
 
 docker tag local-image:tagname new-repo:tagname
