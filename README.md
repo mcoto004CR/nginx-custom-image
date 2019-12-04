@@ -52,4 +52,4 @@ See it...
     
    https://help.insight.com/app/answers/detail/a_id/121/~/getting-started-with-docker-part-2%3A-building-images-and-docker-compose
    
-   
+   https://hub.docker.com/_/nginx
