@@ -50,6 +50,10 @@ Run the image
     docker run --name some-nginx -d -p 8080:80 some-content-nginx
     Note the name of the image is at the end.
     
+See running containers
+    docker ps -a
+    Use name for docker stop [container name]
+
 See it...
     go to http://localhost:8080/
     and you should be able to see the index.html content displayed
