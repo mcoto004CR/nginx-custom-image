@@ -59,5 +59,6 @@ See it...
     
     
    https://help.insight.com/app/answers/detail/a_id/121/~/getting-started-with-docker-part-2%3A-building-images-and-docker-compose
-   
+https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-private-repository
+
    https://hub.docker.com/_/nginx
