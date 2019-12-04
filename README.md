@@ -52,7 +52,9 @@ Run the image
     
 See running containers
     docker ps -a
-    Use name for docker stop [container name]
+    Use name for docker stop [container name
+    
+To remove images use : docker rmi -f [image_id]
 
 See it...
     go to http://localhost:8080/
