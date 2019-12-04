@@ -24,8 +24,31 @@ Create your index.html file, this must be in the same directory than the Dockerf
     
 Build the image
 
-    sudo docker build -t my-nginx:v1.0 .
+    docker build -t <replace by your image name> .
+    ie: docker build -t some-content-nginx .
     Note the point at the end is important dont delete
+    
+List image
+    
+    docker images
+    You should be able to see you image listed.
+    REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+    my-nginx             v1.0                4e3c3cfc6dbf        12 minutes ago      205MB
+    some-content-nginx   latest              4e3c3cfc6dbf        12 minutes ago      205MB
+    ubuntu               xenial              56bab49eef2e        7 days ago          123MB
+
+Run the image
+
+    docker run --name some-nginx -d -p 8080:80 some-content-nginx
+    Note the name of the image is at the end.
+    
+See it...
+    go to http://localhost:8080/
+    and you should be able to see the index.html content displayed
+    
+
+
+    
     
    https://help.insight.com/app/answers/detail/a_id/121/~/getting-started-with-docker-part-2%3A-building-images-and-docker-compose
    
