@@ -1,6 +1,14 @@
 # nginx-custom-image
 How to build a custom nginx for a static web site
 
+Install docker on Ubuntu 19.04
+    
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu disco stable test"
+    sudo apt update
+    sudo apt install docker-ce docker-ce-cli containerd.io
+    sudo adduser $(whoami) docker 
+
 Create a folder for this project
 
 Create "Dockerfile" file
