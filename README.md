@@ -53,28 +53,67 @@ Run the image
 See running containers
     docker ps -a
     Use name for docker stop [container name
-    
-To remove images use : docker rmi -f [image_id]
 
 See it...
+    
     go to http://localhost:8080/
     and you should be able to see the index.html content displayed
     
 Push image to hub repository
-- Create a repository
+Create a repository
+
+    Login into your docker account, if you dont have create one
+    Create a private repository
 
 Login to docker hub
-docker login -u "username" -p "password" docker.io
-may work: docker login --username=yourhubusername  , it will ask for the password
-
-
-docker tag local-image:tagname new-repo:tagname
-docker push new-repo:tagname
-    https://forums.docker.com/t/docker-push-error-requested-access-to-the-resource-is-denied/64468
     
-    https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
+    docker login -u "username" -p "password" docker.io
     
-   https://help.insight.com/app/answers/detail/a_id/121/~/getting-started-with-docker-part-2%3A-building-images-and-docker-compose
-https://stackoverflow.com/questions/28349392/how-to-push-a-docker-image-to-a-private-repository
+Tag the image prior push
+The tagname should be identical to your respository ie: 
 
+    sudo docker tag some-content-nginx:latest crhostservices/custom_nginx:latest
+    See the crhostservices/custom_ngnix
+
+    docker tag local-image:tagname new-repo:tagname
+
+If you run
+    
+    docker images
+    You should see your tag image
+
+Pushing the image to Docket io
+
+    same case here , push the image with the whole repository name
+    docker push new-repo:tagname
+    
+    If you dont use the full repository name, you will get an error "requested access to resource is denied"
+    
+#Other useful docker commands
+
+ To remove images use
+ 
+    docker rmi -f [image_id]
+    Note: if you are trying to remove a image and is in use by a container you will get an error like this
+    image is being used by running container xxx
+    so you will need to stop container first, see below
+ 
+ Stop a container
+    
+    docker ps -a
+    It will show all containers
+    without -a will show only running containers
+    get the container_id to stop
+    
+    docker stop [container_id]
+ 
+ Pull you image to docker
+ 
+    docker pull crhostservices/custom_nginx:latest
+    Need to specify full repository
+    Please note you need to make it public or login if it's private
+    Go to run image example , to make it available on localhost.
+    
+    
+ 
    https://hub.docker.com/_/nginx
