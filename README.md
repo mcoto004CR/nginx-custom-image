@@ -1,4 +1,4 @@
-# Create a custom nginx-custom-image
+# Create a custom nginx image
 ## How to build a custom nginx for a static web site
 
 ### Install docker on Ubuntu 19.04
