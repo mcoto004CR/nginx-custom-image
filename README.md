@@ -114,6 +114,12 @@ The tagname should be identical to your respository ie:
     Please note you need to make it public or login if it's private
     Go to run image example , to make it available on localhost.
     
+## Deploy in Kube node
+
+    you may need to loing in docker.
+    kubectl run <YOUR_DEPLOYMENT_NAME> --image=docker.io/$docker_username/<YOUR_PUBLIC_REPO_IMAGE_NAME>:<TAG>
+
+
     
  
    ### https://hub.docker.com/_/nginx
