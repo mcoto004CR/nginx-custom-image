@@ -119,7 +119,8 @@ The tagname should be identical to your respository ie:
     you may need to loing in docker.
     kubectl run <YOUR_DEPLOYMENT_NAME> --image=docker.io/$docker_username/<YOUR_PUBLIC_REPO_IMAGE_NAME>:<TAG>
 
-
+   ## Good repository for arm images - ARM is the processor of Pi, so images must comply with this standard
+   https://github.com/alexellis/docker-arm/tree/master/images/armhf
     
  
    ### https://hub.docker.com/_/nginx
